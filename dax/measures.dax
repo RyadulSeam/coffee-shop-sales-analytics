@@ -1,0 +1,124 @@
+// =============================================
+// COFFEE SHOP SALES ANALYTICS - DAX MEASURES
+// =============================================
+// Developed by Ryadul Seam
+
+// =============================================
+// 1. SALES MEASURES
+// =============================================
+
+Total Revenue = SUMX(Transactions , Transactions[transaction_qty] * Transactions[unit_price])
+
+Current Month Sales = 
+ VAR selected_month = SELECTEDVALUE('Custom Calendar'[Month])
+        RETURN
+                TOTALMTD(CALCULATE([Total Revenue],'Custom Calendar'[Month] = selected_month ), 'Custom Calendar'[Date])
+
+MOM Growth & Difference Sales = 
+    VAR month_difference = [Current Month Sales]- [Previous Month Sales]
+    VAR mom = ([Current Month Sales]-[Previous Month Sales])/[Previous Month Sales]
+    VAR _sign = IF(month_difference >0 , "+" , "" )
+    VAR _sign_trend = IF(month_difference > 0 , "▲" ,"▼")
+     RETURN
+            _sign_trend & " " & _sign & FORMAT(mom , "#0.0%" ) & " | " & _sign & FORMAT(month_difference/1000 , "#0.0K" ) & " " & "vs LM"
+
+Previous Month Sales = CALCULATE([Total Revenue] , DATEADD('Custom Calendar'[Date],-1 ,MONTH))
+
+// =============================================
+// 2. QUANTITY MEASURES
+// =============================================
+
+Current Month Quantity = 
+ VAR selected_month = SELECTEDVALUE('Custom Calendar'[Month])
+        RETURN
+                TOTALMTD(CALCULATE([Total Quantity Sold],'Custom Calendar'[Month] = selected_month ), 'Custom Calendar'[Date])
+
+MOM Growth & Difference Quantity = 
+    VAR month_difference = [Current Month Quantity]- [Previous Month Quantity]
+
+    VAR mom = ([Current Month Quantity]-[Previous Month Quantity])/[Previous Month Quantity]
+    VAR _sign = IF(month_difference >0 , "+" , "" )
+    VAR _sign_trend = IF(month_difference > 0 , "▲" ,"▼")
+     RETURN
+            _sign_trend & " " & _sign & FORMAT(mom , "#0.0%" ) & " | " & _sign & FORMAT(month_difference/1000 , "#0.0K" ) & " " & "vs LM"
+Previous Month Quantity = CALCULATE([Total Quantity Sold] , DATEADD('Custom Calendar'[Date],-1 ,MONTH))
+
+Total Quantity Sold = SUM(Transactions[transaction_qty])
+
+// =============================================
+// 3. ORDER’S MEASURES
+// =============================================
+
+Current Month Orders = 
+ VAR selected_month = SELECTEDVALUE('Custom Calendar'[Month])
+        RETURN
+                TOTALMTD(CALCULATE([Total Orders],'Custom Calendar'[Month] = selected_month ), 'Custom Calendar'[Date])
+
+MOM Growth & Difference Orders = 
+    VAR month_difference = [Current Month Orders]- [Previous Month Orders]
+    VAR mom = ([Current Month Orders]-[Previous Month Orders])/[Previous Month Orders]
+    VAR _sign = IF(month_difference >0 , "+" , "" )
+    VAR _sign_trend = IF(month_difference > 0 , "▲" ,"▼")
+     RETURN
+            _sign_trend & " " & _sign & FORMAT(mom , "#0.0%" ) & " | " & _sign & FORMAT(month_difference/1000 , "#0.0K" ) & " " & "vs LM"
+
+
+Previous Month Orders = CALCULATE([Total Orders] , DATEADD('Custom Calendar'[Date],-1 ,MONTH))
+
+Total Orders = COUNT(Transactions[transaction_id])
+
+
+
+// =============================================
+// 4. CHART LEVEL MEASURES
+// =============================================
+
+
+Bar Colors = IF([Total Revenue]>[Daily Average Sales] , "AAv" , "BAv")
+
+Daily Average Sales = 
+AVERAGEX(ALLSELECTED(Transactions[transaction_date]) ,[Total Revenue])
+
+Foot Note = "Hover on the visual to see details"
+Label for Product Category = SELECTEDVALUE(Transactions[product_category]) & " | " & FORMAT([Total Revenue]/1000 , "$0.00K" )
+
+Label for Product Type = SELECTEDVALUE(Transactions[product_type]) & " | " & FORMAT([Total Revenue]/1000 , "$0.00K" )
+
+Label for Store Location = SELECTEDVALUE(Transactions[store_location]) & " | " & FORMAT([Total Revenue]/1000 , "$0.00K" )
+
+MOM Label = 
+    VAR month_difference = [Current Month Sales]- [Previous Month Sales]
+    VAR mom = ([Current Month Sales]-[Previous Month Sales])/[Previous Month Sales]
+    VAR _sign = IF(month_difference >0 , "+" , "" )
+    VAR _sign_trend = IF(month_difference > 0 , "▲" ,"▼")
+     RETURN
+            _sign_trend & " " & _sign & FORMAT(mom , "#0.0%" )
+
+
+Place holder = 0
+
+
+// =============================================
+// 5. CUSTOM CALENDAR MEASURES
+// =============================================
+
+
+Custom Calendar = CALENDAR(MIN(Transactions[transaction_date]), MAX(Transactions[transaction_date]))
+
+Day Name = FORMAT('Custom Calendar'[Date], "ddd" )
+
+Day Number = FORMAT('Custom Calendar'[Date], "D")
+
+Month = FORMAT('Custom Calendar'[Date],"mmm")
+
+Month Number = MONTH('Custom Calendar'[Date])
+
+Month Year = FORMAT('Custom Calendar'[Date],"mmm YYYY")
+
+Week Day Number = WEEKDAY('Custom Calendar'[Date], 2)
+
+Week Numbers = WEEKNUM('Custom Calendar'[Date],2)
+
+Weekday / Weekend = IF('Custom Calendar'[Day Name] = "Sat" || 'Custom Calendar'[Day Name] = "Sat" , "Weekend" ,"Weekday")
+
+Hour = HOUR(Transactions[transaction_time])
