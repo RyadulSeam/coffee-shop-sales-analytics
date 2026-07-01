@@ -221,7 +221,7 @@ Both classification and regression models use `unit_price`, `transaction_qty`, `
 ### Prerequisites
 
 **Required:**
-- Python 3.9+
+- Python 3.9+ ![Python](https://img.shields.io/badge/Python-3.9+-blue)
 - PostgreSQL 13+
 - Power BI Desktop (for dashboard)
 
@@ -240,7 +240,7 @@ pip install pandas numpy matplotlib seaborn prophet scikit-learn sqlalchemy psyc
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/coffee-shop-sales-analytics.git
+git clone https://github.com/RyadulSeam/coffee-shop-sales-analytics.git
 cd coffee-shop-sales-analytics
 
 # 2. Set up the database schema
@@ -268,7 +268,7 @@ python scripts/Forecasting.py
 
 ### View the Dashboard
 
-Open the Power BI `.pbix` file (not included in this repo for size reasons) and connect it to your local PostgreSQL instance, or explore the static exports in `dashboard_images/`.
+Open the Power BI `.pbix` file ( not included in this repo for size reasons, DM me on [linkedin.com/in/ryadulseam-data](https://www.linkedin.com/in/ryadulseam-data) for the live .pbix file ) and connect it to your local PostgreSQL instance, or explore the static exports in `dashboard_images/`.
 
 ---
 
@@ -306,7 +306,7 @@ Feel free to connect or reach out to collaborate on your next analytics project.
 
 ---
 
-## 📄 License
+## 📄 License ![License](https://img.shields.io/badge/License-MIT-green)
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
