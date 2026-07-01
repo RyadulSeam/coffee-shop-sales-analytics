@@ -298,9 +298,9 @@ Senior Business Intelligence Analyst | Data Analytics Consultant
 
 Turning numbers into narrative — advanced DAX, Power Query, and client-ready dashboard design.
 
-- 📧 Email: your.email@example.com
-- 🔗 LinkedIn: [linkedin.com/in/ryadul-seam](https://linkedin.com/in/ryadul-seam)
-- 🔗 Portfolio: [Your Portfolio Link]
+- 📧 Email: [ryadulisla@gmail.com](mailto:ryadulisla@gmail.com)
+- 🔗 LinkedIn: [linkedin.com/in/ryadulseam-data](https://www.linkedin.com/in/ryadulseam-data)
+- 🔗 Portfolio: [[Ryadul Seam | Data Analyst |Portfolio](https://substantial-vole-da7.notion.site/Ryadul-Seam-Data-Analyst-Portfolio-2d8fd4f37d128056b5aeeee355a325fe)]
 
 Feel free to connect or reach out to collaborate on your next analytics project.
 
