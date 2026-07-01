@@ -2,7 +2,7 @@
 
 **End-to-End Sales Performance Analysis & Business Intelligence Solution for a Multi-Location Coffee Shop Chain**
 
-![Dashboard Overview](dashboard_images/dashboard_overview.png)
+![Dashboard Overview](dashboard_images/dashboard_overview.PNG)
 
 Analyzing **149,116 transactions** across three locations to uncover sales trends, growth drivers, and optimization opportunities using **SQL, Python, and Power BI**.
 
@@ -186,7 +186,7 @@ An interactive single-page dashboard (Date Range: 01-01-2023 to 30-06-2023) feat
 
 | Overview | Hourly Insight | Daily Drill-down |
 |---|---|---|
-| ![Dashboard Overview](dashboard_images/dashboard_overview.png) | ![Insights Page](dashboard_images/insights_page.png) | ![Revenue Trend](dashboard_images/revenue_trend.png) |
+| ![Dashboard Overview](dashboard_images/dashboard_overview.PNG) | ![Insights Page](dashboard_images/insights_page.PNG) | ![Revenue Trend](dashboard_images/revenue_trend.PNG) |
 
 ---
 
@@ -221,9 +221,9 @@ Both classification and regression models use `unit_price`, `transaction_qty`, `
 ### Prerequisites
 
 **Required:**
-- Python 3.9+
-- PostgreSQL 13+
-- Power BI Desktop (for dashboard)
+- Python 3.9+ ![Python](https://img.shields.io/badge/Python-3.9+-blue)
+- PostgreSQL 13+ ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-13+-blue)
+- Power BI Desktop (for dashboard) ![Power BI](https://img.shields.io/badge/Power%20BI-Desktop-purple)
 
 **Recommended Tools:**
 - VS Code (with Python extension)
@@ -240,7 +240,7 @@ pip install pandas numpy matplotlib seaborn prophet scikit-learn sqlalchemy psyc
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/coffee-shop-sales-analytics.git
+git clone https://github.com/RyadulSeam/coffee-shop-sales-analytics.git
 cd coffee-shop-sales-analytics
 
 # 2. Set up the database schema
@@ -268,7 +268,7 @@ python scripts/Forecasting.py
 
 ### View the Dashboard
 
-Open the Power BI `.pbix` file (not included in this repo for size reasons) and connect it to your local PostgreSQL instance, or explore the static exports in `dashboard_images/`.
+Open the Power BI `.pbix` file ( not included in this repo for size reasons, DM me on [linkedin.com/in/ryadulseam-data](https://www.linkedin.com/in/ryadulseam-data) for the live .pbix file ) and connect it to your local PostgreSQL instance, or explore the static exports in `dashboard_images/`.
 
 ---
 
@@ -306,7 +306,7 @@ Feel free to connect or reach out to collaborate on your next analytics project.
 
 ---
 
-## 📄 License
+## 📄 License ![License](https://img.shields.io/badge/License-MIT-green)
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
