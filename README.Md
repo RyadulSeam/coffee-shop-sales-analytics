@@ -2,7 +2,7 @@
 
 **End-to-End Sales Performance Analysis & Business Intelligence Solution for a Multi-Location Coffee Shop Chain**
 
-![Dashboard Overview](dashboard_images/dashboard_overview.png)
+![Dashboard Overview](dashboard_images/dashboard_overview.PNG)
 
 Analyzing **149,116 transactions** across three locations to uncover sales trends, growth drivers, and optimization opportunities using **SQL, Python, and Power BI**.
 
