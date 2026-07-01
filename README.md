@@ -223,7 +223,7 @@ Both classification and regression models use `unit_price`, `transaction_qty`, `
 **Required:**
 - Python 3.9+ ![Python](https://img.shields.io/badge/Python-3.9+-blue)
 - PostgreSQL 13+ ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-13+-blue)
-- Power BI Desktop (for dashboard) ![Power BI](https://img.shields.io/badge/Power%20BI-Desktop-purple)
+- Power BI Desktop (for dashboard) ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)
 
 **Recommended Tools:**
 - VS Code (with Python extension)
