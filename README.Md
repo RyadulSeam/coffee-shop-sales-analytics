@@ -186,7 +186,7 @@ An interactive single-page dashboard (Date Range: 01-01-2023 to 30-06-2023) feat
 
 | Overview | Hourly Insight | Daily Drill-down |
 |---|---|---|
-| ![Dashboard Overview](dashboard_images/dashboard_overview.png) | ![Insights Page](dashboard_images/insights_page.png) | ![Revenue Trend](dashboard_images/revenue_trend.png) |
+| ![Dashboard Overview](dashboard_images/dashboard_overview.PNG) | ![Insights Page](dashboard_images/insights_page.PNG) | ![Revenue Trend](dashboard_images/revenue_trend.PNG) |
 
 ---
 
