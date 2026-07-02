@@ -294,9 +294,11 @@ Open the Power BI `.pbix` file ( not included in this repo for size reasons, DM 
 ## 👤 Author & Contact
 
 **Ryadul Seam**
-Senior Business Intelligence Analyst | Data Analytics Consultant
 
-Turning numbers into narrative — advanced DAX, Power Query, and client-ready dashboard design.
+**Data Analytics & Power BI Consultant | Founder @ SEAM ANALYTICS**
+
+**I help Finance, Operations, Retail, Logistics, and E-commerce teams turn messy raw data into clear, actionable business insights.**
+
 
 - 📧 Email: [ryadulisla@gmail.com](mailto:ryadulisla@gmail.com)
 - 🔗 LinkedIn: [linkedin.com/in/ryadulseam-data](https://www.linkedin.com/in/ryadulseam-data)
